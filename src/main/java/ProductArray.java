@@ -8,8 +8,31 @@
 public class ProductArray {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5,6};
+        int[] arr = new int[]{4, 5, 9, 2 , 8};
 
+        int n = arr.length;
+        int product[] = new int[n];
+        int previous = arr[0];
+        int next = arr[n - 1];
+        for(int k =0; k<= n - 1; k++){
+            product[k] = 1;
+        }
+
+
+        for(int i = 1 ; i < n ; i++){
+            product[i] = product[i] * previous;
+            previous = previous * arr[i];
+        }
+        for(int j = n - 2; j >= 0 ; j--){
+            product[j] = product[j] * next;
+            next = next * arr[j];
+        }
+
+        System.out.println(" ");
+        for(int p =0; p <= n - 1; p++){
+            System.out.println(arr[p] + " > " + product[p]);
+
+        }
 
 
     }
