@@ -14,11 +14,10 @@ public class ProductArray {
         int product[] = new int[n];
         int previous = arr[0];
         int next = arr[n - 1];
+
         for(int k =0; k<= n - 1; k++){
             product[k] = 1;
         }
-
-
         for(int i = 1 ; i < n ; i++){
             product[i] = product[i] * previous;
             previous = previous * arr[i];
@@ -33,7 +32,6 @@ public class ProductArray {
             System.out.println(arr[p] + " > " + product[p]);
 
         }
-
 
     }
 }

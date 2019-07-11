@@ -20,4 +20,9 @@ class BinaryTreeNode
 
        return Math.max(left, right) + 1;
    }
+
+    @Override
+    public String toString() {
+        return   key + "> " + left.key + " > " + right.key;
+    }
 }
