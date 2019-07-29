@@ -23,6 +23,10 @@ public class ColorAdjacentPixels {
             ColorAdjacentPixels.colorAdjacentPixels(x+1,y,color,rows,columns, visited);
 
         }
+        int c1 = 0;
+        char c = 'a';
+        c1 = c;
+
         if(y + 1 <= columns -1 && colors[x][y] == colors[x][y+1] && visited[x][y + 1] != 1){
             visited[x][y + 1] = 1;
             ColorAdjacentPixels.colorAdjacentPixels(x,y + 1,color,rows,columns, visited);
