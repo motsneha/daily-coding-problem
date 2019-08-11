@@ -27,11 +27,6 @@ public class TwoDIterator {
 
     }
 
-
-
-
-
-
     boolean hasNext(){
         if(m == array.length){
             return false;
@@ -55,8 +50,6 @@ public class TwoDIterator {
     }
 
 
-
-
     public static void main(String[] args) throws Exception {
         TwoDIterator twoDArray = new TwoDIterator(4);
 
@@ -69,7 +62,6 @@ public class TwoDIterator {
             while(twoDArray.hasNext()){
                 System.out.println(twoDArray.next());
             }
-
 
     }
 

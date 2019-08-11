@@ -66,7 +66,8 @@ public class Trie {
                 t = children.get(c);
                 children = t.children;
 
-            }else{
+            }
+            else{
                 return false;
             }
 
@@ -92,7 +93,6 @@ public class Trie {
         }
 
     }
-
 
     public static void main(String args[]){
         Trie trie = new Trie();
