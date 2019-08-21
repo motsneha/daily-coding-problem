@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class BinaryTreeNode
 {
    int key;
@@ -23,6 +25,7 @@ class BinaryTreeNode
 
     @Override
     public String toString() {
-        return   key + "> " + left.key + " > " + right.key;
+        return   key + "> " + (Objects.isNull(left) ? "" : left.key) + " > " +
+                ( Objects.isNull(right) ? "" : right.key);
     }
 }
