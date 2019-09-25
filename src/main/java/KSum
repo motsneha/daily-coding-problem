@@ -1,3 +1,7 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 /**
  * This problem was recently asked by Google.
 
@@ -13,7 +17,12 @@ public class KSum{
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
         String[] arrItems = sc.nextLine().split(" ");
-        Ma<Integer, Integer> map = new HashMap<>();
+        System.out.println(isKSumPresent(k, arrItems));
+        return;
+    }
+
+    private static boolean isKSumPresent(int k, String[] arrItems) {
+        Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < arrItems.length; i++){
             int current = Integer.parseInt(arrItems[i]);
             if(map.get(k - current) != null){
